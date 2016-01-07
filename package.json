@@ -2,9 +2,12 @@
   "name": "open-ng2-tests",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "app/boot.js",
   "scripts": {
     "compile": "tsc",
+    "bundle": "node build.js",
+    "initUnbundled": "cp index.unbundled.html index.html",
+    "initBundled": "cp index.bundled.html index.html",
     "start": "http-server ./ -p 4000"
   },
   "repository": {
@@ -17,7 +20,10 @@
     "url": "https://github.com/ronzeidman/open-ng2-tests/issues"
   },
   "homepage": "https://github.com/ronzeidman/open-ng2-tests#readme",
-  "devDependencies": {},
+  "devDependencies": {
+    "path": "^0.12.7",
+    "systemjs-builder": "^0.14.15"
+  },
   "dependencies": {
     "angular2": "^2.0.0-beta.0",
     "angular2-jwt": "^0.1.4",
@@ -25,7 +31,7 @@
     "es6-shim": "^0.33.3",
     "reflect-metadata": "^0.1.2",
     "rxjs": "^5.0.0-beta.0",
-    "systemjs": "^0.19.12",
+    "systemjs": "^0.19.13",
     "zone.js": "^0.5.10"
   }
 }

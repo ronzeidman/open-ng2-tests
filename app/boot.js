@@ -1,5 +1,4 @@
-System.register(['angular2/bootstrap', 'angular2/core', 'angular2-jwt'], function(exports_1) {
-    "use strict";
+System.register(['zone.js/dist/zone.min.js', 'reflect-metadata', 'angular2/bootstrap', 'angular2/core', 'angular2-jwt'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -13,6 +12,8 @@ System.register(['angular2/bootstrap', 'angular2/core', 'angular2-jwt'], functio
     var AppComponent;
     return {
         setters:[
+            function (_1) {},
+            function (_2) {},
             function (bootstrap_1_1) {
                 bootstrap_1 = bootstrap_1_1;
             },
@@ -34,7 +35,7 @@ System.register(['angular2/bootstrap', 'angular2/core', 'angular2-jwt'], functio
                     __metadata('design:paramtypes', [])
                 ], AppComponent);
                 return AppComponent;
-            }());
+            })();
             bootstrap_1.bootstrap(AppComponent, [angular2_jwt_1.AuthHttp]);
         }
     }

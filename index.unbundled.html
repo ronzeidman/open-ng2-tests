@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <base href=".">
+</head>
+
+<body>
+<my-app>Loading...</my-app>
+</body>
+<script src="/node_modules/systemjs/dist/system.src.js"></script>
+<script src="config.js"></script>
+<script>
+    //bootstrap the Angular2 application
+    System.import('./app/boot').catch(console.log.bind(console))
+</script>
+</html>

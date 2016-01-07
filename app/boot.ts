@@ -1,5 +1,7 @@
 
 // Angular 2
+import 'zone.js/dist/zone.min.js';
+import 'reflect-metadata';
 import {bootstrap} from 'angular2/bootstrap';
 import {Component} from 'angular2/core';
 import {AuthHttp} from 'angular2-jwt';
@@ -11,4 +13,3 @@ import {AuthHttp} from 'angular2-jwt';
 class AppComponent {}
 
 bootstrap(AppComponent, [AuthHttp]);
-
