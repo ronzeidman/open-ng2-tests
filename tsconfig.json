@@ -8,7 +8,7 @@
     "removeComments": true,
     "sourceMap": true
   },
-  "exclude": [
-    "node_modules"
+  "files": [
+    "app/boot.ts"
   ]
 }

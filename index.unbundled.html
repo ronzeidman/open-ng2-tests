@@ -2,7 +2,8 @@
 <html>
 
 <head>
-    <base href=".">
+    <link rel="stylesheet" type="text/css" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <base href="/">
 </head>
 
 <body>
@@ -12,6 +13,6 @@
 <script src="config.js"></script>
 <script>
     //bootstrap the Angular2 application
-    System.import('./app/boot').catch(console.log.bind(console))
+    SystemJS.import('./app/boot').catch(console.log.bind(console))
 </script>
 </html>

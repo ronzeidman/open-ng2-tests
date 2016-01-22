@@ -4,12 +4,37 @@ import 'zone.js/dist/zone.min.js';
 import 'reflect-metadata';
 import {bootstrap} from 'angular2/bootstrap';
 import {Component} from 'angular2/core';
-import {AuthHttp} from 'angular2-jwt';
+import {TYPEAHEAD_DIRECTIVES} from 'ng2-bootstrap/ng2-bootstrap';
+
+
+@Component({
+    selector: 'my-form',
+    template: `
+    <form (submit)="logSubmit()">
+        <input [(ngModel)]="testModel"
+               [typeahead]="['aaa','bbb','ccc']"
+               type="text" placeholder="test"
+               class="form-control"
+               autocomplete="off"
+         >
+        <button type="submit" >Submit</button>
+    </form>
+    `,
+    directives: [TYPEAHEAD_DIRECTIVES]
+})
+class FormComponent {
+    testModel = '';
+
+    logSubmit() {
+        console.log("Submitted!")
+    }
+}
 
 @Component({
     selector: 'my-app',
-    template: '<p>loaded</p>'
+    template: '<my-form></my-form>',
+    directives: [FormComponent]
 })
 class AppComponent {}
 
-bootstrap(AppComponent, [AuthHttp]);
+bootstrap(AppComponent);

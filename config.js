@@ -1,9 +1,10 @@
 /**
  * Created by Ron on 07/01/2016.
  */
-System.config({
+SystemJS.config({
     defaultJSExtensions: true,
     paths: {
+        '../*': '../*',
         './*': './*',
         '*': './node_modules/*'
     },
