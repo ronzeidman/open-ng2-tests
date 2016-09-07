@@ -1,14 +1,22 @@
 {
   "compilerOptions": {
+    "noEmitHelpers": true,
+    "declaration": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "target": "es5",
-    "module": "system",
+    "module": "commonjs",
     "moduleResolution": "node",
-    "removeComments": true,
-    "sourceMap": true
+    "noEmitOnError": true,
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "rootDir": "./src",
+    "sourceMap": true,
+    "target": "es5",
+    "outDir": "dist/",
+    "types": ["core-js"]
   },
   "files": [
-    "app/boot.ts"
-  ]
+    "src/bootstrap.ts"
+  ],
+  "exclude": ["node_modules"]
 }

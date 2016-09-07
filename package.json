@@ -4,11 +4,8 @@
   "description": "",
   "main": "app/boot.js",
   "scripts": {
-    "compile": "tsc",
-    "bundle": "node build.js",
-    "initUnbundled": "cp index.unbundled.html index.html",
-    "initBundled": "cp index.bundled.html index.html",
-    "start": "node node_modules/light-server/bin/light-server -s . -p 4001"
+    "compile": "webpack",
+    "start": "http-server"
   },
   "repository": {
     "type": "git",
@@ -21,18 +18,25 @@
   },
   "homepage": "https://github.com/ronzeidman/open-ng2-tests#readme",
   "devDependencies": {
-    "light-server": "^1.1.2",
-    "systemjs-builder": "^0.15.2"
+    "@angular/common": "^2.0.0-rc.6",
+    "@angular/compiler": "^2.0.0-rc.6",
+    "@angular/core": "^2.0.0-rc.6",
+    "@angular/platform-browser": "^2.0.0-rc.6",
+    "@angular/platform-browser-dynamic": "^2.0.0-rc.6",
+    "@types/core-js": "^0.9.32",
+    "angular2-template-loader": "^0.5.0",
+    "core-js": "^2.4.1",
+    "css-loader": "^0.25.0",
+    "http-server": "^0.9.0",
+    "ng2-toastr": "^0.4.2",
+    "rxjs": "^5.0.0-beta.11",
+    "style-loader": "^0.13.1",
+    "ts-helpers": "^1.1.1",
+    "ts-loader": "^0.8.2",
+    "typescript": "2.0.0",
+    "webpack": "^2.1.0-beta.21",
+    "webpack-dev-server": "^2.1.0-beta.2",
+    "zone.js": "^0.6.17"
   },
-  "dependencies": {
-    "angular2": "^2.0.0-beta.1",
-    "bootstrap": "^3.3.6",
-    "es6-promise": "^3.0.2",
-    "es6-shim": "^0.33.3",
-    "ng2-bootstrap": "^1.0.1-beta.1",
-    "reflect-metadata": "^0.1.3",
-    "rxjs": "^5.0.0-beta.0",
-    "systemjs": "^0.19.15",
-    "zone.js": "^0.5.10"
-  }
+  "dependencies": {}
 }
